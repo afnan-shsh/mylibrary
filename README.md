@@ -4,7 +4,7 @@
 - Laravel 10, Filament v3, PHP 8.2, MySQL
 
 ## Setup
-1. git clone https://github.com/username/repo
+1.git clone https://github.com/afnan-shsh/mylibrary
 2. composer install
 3. cp .env.example .env
 4. php artisan key:generate
@@ -14,9 +14,9 @@
 8. php artisan serve
 
 ## Test Accounts
-- Reader:    reader@test.com / password
-- Library:   library@test.com / password
-- Publisher: publisher@test.com / password
+- Reader:    reader@test.com / 12345678
+- Library:   library@test.com / 12345678
+- Publisher: publisher@test.com / 12345678
 
 ## Features
 - Browse, buy & rent books
