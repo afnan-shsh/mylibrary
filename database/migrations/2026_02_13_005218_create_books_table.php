@@ -9,10 +9,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('books', function (Blueprint $table) {
-            // حذف الـ foreign key القديم
             $table->dropForeign(['publisher_id']);
-
-            // إضافة foreign key صح يشير لجدول publishers عمود id
             $table->foreign('publisher_id')
                 ->references('id')
                 ->on('publishers')
