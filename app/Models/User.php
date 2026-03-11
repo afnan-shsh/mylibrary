@@ -50,7 +50,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function publisherProfile()
     {
-        // العلاقة بين المستخدم وحساب الناشر
         return $this->hasOne(Publisher::class, 'user_id');
     }
 
