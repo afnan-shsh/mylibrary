@@ -28,7 +28,7 @@ class BookController extends Controller
                     ->exists()
                 : false;
 
-            // هل القارئ الحالي يستعيره هو (مش أي شخص)
+            // هل القارئ الحالي يستعيره هو 
             $book->isMyRent = auth()->check()
                 ? Transaction::where('user_id', auth()->id())
                     ->where('book_id', $book->id)
@@ -86,7 +86,7 @@ class BookController extends Controller
         $avgRating    = Review::where('book_id', $book->id)->avg('rating') ?? 0;
         $reviewsCount = Review::where('book_id', $book->id)->count();
 
-        // isRented = القارئ الحالي فقط (مش أي شخص)
+        // isRented = القارئ الحالي فقط
         $isRented = $alreadyRented;
 
         return view('books.show', compact(
