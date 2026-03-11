@@ -20,7 +20,7 @@ class Book extends Model
         'cover',
     ];
 
-    // publisher_id يشير لـ id في جدول publishers
+    
     public function publisher()
     {
         return $this->belongsTo(Publisher::class, 'publisher_id', 'id');
