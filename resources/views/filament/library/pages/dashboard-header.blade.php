@@ -5,7 +5,7 @@
         border-radius: 12px;
         padding: 20px 24px;
     }
-    /* لما Filament يكون في Dark Mode يضيف class="dark" على html */
+    
     html.dark .dash-card {
         background: rgb(30 30 30);
         border-color: rgb(55 55 55);
@@ -39,7 +39,7 @@
 
 <div style="padding: 4px 0;">
 
-    {{-- بوكس الترحيب --}}
+    {{-- الترحيب --}}
     <div class="dash-welcome">
         <h2 style="font-size: 1.5rem; font-weight: bold; margin: 0;">
             Welcome {{ $name }} 👋
