@@ -8,7 +8,7 @@
 
     <div class="show-wrapper">
 
-        {{-- Left: Cover --}}
+        {{-- left: cover --}}
         <div class="show-left">
             <div class="show-cover-wrap">
                 @if($book->cover)
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        {{-- Right: Info --}}
+        {{-- right: info --}}
         <div class="show-right">
 
             @if($isRented && !$alreadyOwned)
