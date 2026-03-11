@@ -18,7 +18,6 @@ class Publisher extends Model
 
     public function books()
 {
-    // publisher_id في جدول الكتب يشير إلى user_id في جدول publishers
     return $this->hasMany(Book::class, 'publisher_id', 'user_id');
 }
     public function user()
