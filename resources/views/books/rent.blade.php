@@ -8,7 +8,7 @@
 
     <div class="rent-wrapper">
 
-        {{-- Left: Book Info --}}
+        {{-- left: book info --}}
         <div class="rent-left">
             <div class="rent-cover">
                 @if($book->cover)
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        {{-- Right: Form --}}
+        {{-- right: form --}}
         <div class="rent-right">
             <div class="rent-badge">📖 Rent This Book</div>
             <h1 class="rent-title">Choose Your Rental Period</h1>
