@@ -32,7 +32,7 @@ class AuthController extends Controller
         return back()->withErrors(['email' => 'Invalid credentials']);
     }
 
-    // ======= Register =======
+    // register
     public function showRegister()
     {
         return view('auth.register');
@@ -50,7 +50,7 @@ class AuthController extends Controller
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
-            'role'     => 'reader', // دايماً reader
+            'role'     => 'reader',
         ]);
 
         Auth::login($user);
