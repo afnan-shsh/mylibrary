@@ -52,18 +52,11 @@ Route::middleware(['auth','role:admin'])->group(function () {
     });
 });
 
-// Route::middleware(['auth','role:publisher'])->group(function () {
-//     Route::get('/publisher/Dashboard', function () {
-//         return view('publisher.Dashboard');
-//     });
-// });
-
 Route::middleware(['auth','role:reader'])->group(function () {
     Route::get('/reader/Dashboard', function () {
         return view('reader.Dashboard');
     });
 });
-
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -72,41 +65,17 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/{book}', [BookController::class, 'show'])->name('books.show');
 
-// Route::post('/logout', function () {
-//     Auth::logout();
-//     return redirect('/'); // يرجع للصفحة الرئيسية بعد تسجيل الخروج
-// })->name('logout');
-
-
-// Route::post('/books/{book}/rent', [BookController::class, 'rent'])
-//     ->middleware(['auth','role:reader'])
-//     ->name('books.rent');
-
-    Route::get('/test', function () {
+Route::get('/test', function () {
     return 'You are logged in as: ' . auth()->user()->email;
-})->middleware('auth');
+    })->middleware('auth');
 
 Route::post('/books/{book}/buy', [BookController::class, 'buy'])
     ->middleware(['auth','role:reader'])
     ->name('books.buy');
 
-// Route::post('/books/{book}/rent', [RentalController::class, 'rent'])
-//     ->middleware('auth')
-//     ->name('rent.store');
-
-// Route::post('/books/{book}/buy', [RentalController::class, 'buy'])
-//     ->middleware('auth')
-//     ->name('buy.store');
-
-    Route::get('/books/{book}/rent', function(Book $book){
+Route::get('/books/{book}/rent', function(Book $book){
     return view('books.rent', compact('book'));
-})->middleware('auth')->name('rent.page');
-
-
-// Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
-// Route::post('/register', [AuthController::class, 'register']);
-
-
+    })->middleware('auth')->name('rent.page');
 
 Route::middleware(['auth','role:reader'])->group(function () {
 
@@ -117,12 +86,10 @@ Route::middleware(['auth','role:reader'])->group(function () {
         ->name('books.buy');
 });
 
-
 Route::middleware(['auth','role:reader'])->group(function () {
 
     Route::get('/my-books', [TransactionController::class, 'myBooks'])
         ->name('my.books');
-
 });
 
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
