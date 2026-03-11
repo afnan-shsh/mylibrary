@@ -4,7 +4,7 @@
 
 <div class="login-page">
 
-    {{-- Left Side --}}
+    {{-- left Side --}}
     <div class="login-left">
         <div class="login-left-content">
             <div class="login-brand">📚 MyLibrary</div>
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    {{-- Right Side --}}
+    {{-- right Side --}}
     <div class="login-right">
         <div class="login-form-wrap">
 
