@@ -1,12 +1,8 @@
-/* ============================================
-   MYLIBRARY - Main Stylesheet
-   ============================================ */
+/* MYLIBRARY - main stylesheet */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-/* ============================================
-   1. RESET & BASE
-   ============================================ */
+/*  1. RESET & BASE */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -15,9 +11,7 @@ body {
     min-height: 100vh;
 }
 
-/* ============================================
-   2. NAVBAR
-   ============================================ */
+/* 2. NAVBAR */
 .navbar {
     background: white;
     padding: 15px 40px;
@@ -36,9 +30,7 @@ body {
 .navbar nav a:hover { color: #4f46e5; }
 .logo { font-size: 20px; font-weight: bold; color: #4f46e5; }
 
-/* ============================================
-   3. HERO
-   ============================================ */
+/* 3. HERO */
 .hero { text-align: center; padding: 60px 20px; }
 .hero h1 {
     font-family: 'Fraunces', serif;
@@ -48,9 +40,7 @@ body {
 }
 .hero p { color: #666; font-size: 16px; }
 
-/* ============================================
-   4. LAYOUT
-   ============================================ */
+/* 4. LAYOUT */
 .container { padding: 40px; }
 .page-title {
     font-family: 'Fraunces', serif;
@@ -59,9 +49,7 @@ body {
     margin-bottom: 24px;
 }
 
-/* ============================================
-   5. DARK MODE TOGGLE
-   ============================================ */
+/* 5. DARK MODE TOGGLE */
 .dark-btn {
     border: none;
     background: #e5e7eb;
@@ -88,9 +76,7 @@ body {
     box-shadow: 0 1px 4px rgba(0,0,0,0.15);
 }
 
-/* ============================================
-   6. DARK MODE
-   ============================================ */
+/* 6. DARK MODE */
 body.dark {
     background: #0f0f1a;
     color: #f1f5f9;
@@ -104,9 +90,7 @@ body.dark .page-title   { color: #f1f5f9; }
 body.dark .dark-btn     { background: #4f46e5; }
 body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
 
-/* ============================================
-   7. BUTTONS (عامة)
-   ============================================ */
+/* 7. BUTTONS (عامة) */
 .btn {
     padding: 8px 18px;
     border-radius: 8px;
@@ -133,9 +117,7 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
     to   { transform: translateY(0);    opacity: 1; }
 }
 
-/* ============================================
-   9. BOOKS INDEX PAGE
-   ============================================ */
+/* 9. BOOKS INDEX PAGE */
 
 /* Search */
 .search-wrap { margin-bottom: 40px; }
@@ -292,14 +274,14 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
 .book-price { font-weight: 600; color: #4f46e5; font-size: 0.9rem; margin-bottom: 12px; }
 .book-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
 
-/* Badges - index page (بدون position absolute) */
+/* Badges - index page  */
 .badge-new      { background: #fef3c7; color: #92400e; }
 .badge-available{ background: #d1fae5; color: #065f46; }
 .badge-rented   { background: #fee2e2; color: #991b1b; }
 .badge-owned    { background: #e0e7ff; color: #3730a3; }
 .badge-popular  { background: #fce7f3; color: #9d174d; }
 .book-badges .badge {
-    position: static; /* تجاوز الـ absolute من الـ badge العام */
+    position: static; 
     font-size: 0.72rem;
     padding: 3px 8px;
     border-radius: 20px;
@@ -339,9 +321,7 @@ body.dark .search-form input { background: #1e1e30; border-color: #2d2d45; color
 body.dark .section-header h2 { color: #f1f5f9; }
 body.dark .section-divider   { background: #2d2d45; }
 
-/* ============================================
-   10. BOOK SHOW PAGE
-   ============================================ */
+/* 10. BOOK SHOW PAGE */
 .show-container {
     max-width: 700px;
     margin: 40px auto;
@@ -375,9 +355,7 @@ body.dark .show-title     { color: #f1f5f9; }
 body.dark .show-meta,
 body.dark .show-description { color: #94a3b8; }
 
-/* ============================================
-   11. LOGIN PAGE
-   ============================================ */
+/* 11. LOGIN PAGE */
 .login-box {
     background: white;
     padding: 40px;
@@ -418,9 +396,7 @@ body.dark .show-description { color: #94a3b8; }
 .login-box button:hover { background: #4338ca; }
 .login-error { color: #dc2626; text-align: center; margin-bottom: 12px; font-size: 0.9rem; }
 
-/* ============================================
-   12. MY BOOKS / READER DASHBOARD
-   ============================================ */
+/* 12. MY BOOKS / READER DASHBOARD */
 .reader-dash { padding: 0 0 60px; }
 .dash-hero {
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #16213e 100%);
@@ -519,9 +495,7 @@ body.dark .show-description { color: #94a3b8; }
 }
 .empty-state a:hover { background: #4338ca; }
 
-/* ============================================
-   FIX: Dark Toggle - إزالة القمر المكرر
-   ============================================ */
+/*  FIX: Dark Toggle  */
 .dark-btn {
     border: none;
     background: #e5e7eb;
@@ -532,7 +506,7 @@ body.dark .show-description { color: #94a3b8; }
     position: relative;
     transition: background 0.4s ease;
     flex-shrink: 0;
-    font-size: 0; /* إخفاء أي نص أو emoji داخل الزر */
+    font-size: 0; 
 }
 .dark-btn::before {
     content: "🌙";
@@ -551,9 +525,7 @@ body.dark .show-description { color: #94a3b8; }
 body.dark .dark-btn { background: #4f46e5; }
 body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
 
-/* ============================================
-   Best Sellers - تحديث
-   ============================================ */
+/* Best Sellers  */
 .bestseller-card {
     text-decoration: none;
     cursor: pointer;
@@ -573,9 +545,7 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
     color: white;
 }
 
-/* ============================================
-   Book Cover Hover Overlay
-   ============================================ */
+/* Book Cover Hover Overlay */
 .book-cover-link { display: block; text-decoration: none; }
 .book-cover { position: relative; }
 .book-cover-overlay {
@@ -594,9 +564,7 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
 }
 .book-cover-link:hover .book-cover-overlay { opacity: 1; }
 
-/* ============================================
-   SHOW PAGE - تصميم صفحة التفاصيل
-   ============================================ */
+/*  SHOW PAGE - صفحة التفاصيل */
 .show-page { padding: 0 0 60px; }
 
 .back-link {
@@ -619,7 +587,7 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
 
-/* Left */
+/* left */
 .show-cover-wrap {
     border-radius: 14px;
     overflow: hidden;
@@ -664,7 +632,7 @@ body.dark .dark-btn::before { content: "☀️"; transform: translateX(24px); }
 }
 .show-stat-label { font-size: 0.78rem; color: #9ca3af; }
 
-/* Right */
+/* right */
 .show-status-badge {
     display: inline-block;
     padding: 4px 12px;
@@ -779,9 +747,7 @@ body.dark .show-stat         { background: #16213e; border-color: #2d2d45; }
 body.dark .show-cover-placeholder { background: #16213e; }
 body.dark .back-link         { color: #818cf8; }
 
-/* ============================================
-   LOGIN PAGE - Split Layout
-   ============================================ */
+/* LOGIN PAGE - Split Layout */
 .login-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -789,7 +755,7 @@ body.dark .back-link         { color: #818cf8; }
     margin: -40px;
 }
 
-/* Left */
+/* left */
 .login-left {
     background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4f46e5 100%);
     display: flex;
@@ -854,7 +820,7 @@ body.dark .back-link         { color: #818cf8; }
 .lf-title { color: white; font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
 .lf-desc  { color: rgba(255,255,255,0.55); font-size: 0.8rem; }
 
-/* Right */
+/* right */
 .login-right {
     background: white;
     display: flex;
@@ -938,9 +904,7 @@ body.dark .login-back         { color: #64748b; }
     .login-right { padding: 40px 24px; }
 }
 
-/* ============================================
-   RENT PAGE
-   ============================================ */
+/* RENT PAGE */
 .rent-page { padding: 0 0 60px; }
 
 .rent-wrapper {
@@ -954,7 +918,7 @@ body.dark .login-back         { color: #64748b; }
     margin-top: 8px;
 }
 
-/* Left */
+/* left */
 .rent-cover {
     border-radius: 12px;
     overflow: hidden;
@@ -982,7 +946,7 @@ body.dark .login-back         { color: #64748b; }
 .rent-book-publisher { color: #9ca3af; font-size: 0.85rem; margin-bottom: 8px; }
 .rent-book-price { color: #4f46e5; font-weight: 600; font-size: 0.9rem; }
 
-/* Right */
+/* right */
 .rent-badge {
     display: inline-block;
     background: #e0e7ff;
@@ -1077,9 +1041,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
     .rent-cover { width: 100px; margin-bottom: 0; flex-shrink: 0; }
 }
 
-/* ============================================
-   MY BOOKS PAGE
-   ============================================ */
+/*  MY BOOKS PAGE */
 .mybooks-page { padding: 0 0 60px; }
 
 .mybooks-header {
@@ -1108,7 +1070,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
 }
 .mybooks-browse-btn:hover { background: #4338ca; }
 
-/* Stats */
+/* stats */
 .mybooks-stats {
     display: flex;
     gap: 16px;
@@ -1133,7 +1095,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
 }
 .mybooks-stat-label { font-size: 0.8rem; color: #9ca3af; }
 
-/* Grid */
+/* grid */
 .mybooks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1152,7 +1114,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
     box-shadow: 0 10px 24px rgba(0,0,0,0.1);
 }
 
-/* Cover */
+/* cover */
 .mybooks-cover-link { display: block; text-decoration: none; }
 .mybooks-cover {
     width: 100%; height: 180px;
@@ -1179,7 +1141,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
 }
 .mybooks-cover-link:hover .mybooks-cover-overlay { opacity: 1; }
 
-/* Info */
+/* info */
 .mybooks-info { padding: 14px; }
 .mybooks-book-title {
     font-weight: 600;
@@ -1212,7 +1174,7 @@ body.dark .rent-info-box     { background: #1c1a0e; border-color: #854d0e; color
     font-size: 0.72rem;
 }
 
-/* Empty */
+/* empty */
 .mybooks-empty {
     text-align: center;
     padding: 80px 20px;
@@ -1241,9 +1203,7 @@ body.dark .mybooks-book-title { color: #f1f5f9; }
 body.dark .mybooks-cover      { background: #16213e; }
 body.dark .mybooks-empty h3   { color: #f1f5f9; }
 
-/* ============================================
-   MY BOOKS PAGE
-   ============================================ */
+/* MY BOOKS PAGE */
 .mybooks-page { padding: 0 0 60px; }
 
 .mybooks-browse {
@@ -1333,7 +1293,7 @@ body.dark .mybooks-empty h3   { color: #f1f5f9; }
 }
 .mybook-btn:hover { background: #4f46e5; color: white; }
 
-/* Badge جديد */
+/* Badge */
 .badge-unavailable { background: #f3f4f6; color: #6b7280; }
 
 /* Dark Mode - My Books */
@@ -1344,9 +1304,7 @@ body.dark .mybook-btn     { background: #16213e; color: #94a3b8; }
 body.dark .mybook-btn:hover { background: #4f46e5; color: white; }
 body.dark .mybook-cover   { background: #16213e; }
 
-/* ============================================
-   MY BOOKS - Expired State
-   ============================================ */
+/* MY BOOKS - Expired State */
 .mybook-card.expired { opacity: 0.75; }
 
 .mybook-cover { position: relative; }
@@ -1388,11 +1346,9 @@ body.dark .mybook-badge.expired-badge { background: #1e293b; color: #64748b; }
 }
 .login-nav-btn:hover { background: #4338ca; }
 
-/* ============================================
-   REVIEW / RATING SYSTEM
-   ============================================ */
+/* REVIEW / RATING SYSTEM */
 
-/* عرض النجوم العامة */
+/*  النجوم العامة */
 .show-rating-wrap {
     display: flex;
     align-items: center;
@@ -1475,9 +1431,7 @@ body.dark .review-title    { color: #e2e8f0; }
 body.dark .rating-text     { color: #64748b; }
 body.dark .star-empty      { color: #374151; }
 
-/* ============================================
-   STAR RATING SYSTEM
-   ============================================ */
+/* STAR RATING SYSTEM */
 .show-rating-wrap {
     display: flex;
     align-items: center;
