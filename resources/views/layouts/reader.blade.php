@@ -26,7 +26,7 @@
             @endif
 
             <div style="position:relative;">
-                {{-- الدائرة --}}
+                {{-- حساب القارئ --}}
                 <div id="userCircle" style="
                     width:35px; height:35px; border-radius:50%;
                     background:#4f46e5; color:white; display:flex;
