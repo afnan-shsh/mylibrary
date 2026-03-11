@@ -36,7 +36,7 @@ class LibraryPanelProvider extends PanelProvider
                 in: app_path('Filament/Library/Pages'),
                 for: 'App\\Filament\\Library\\Pages'
             )
-            ->widgets([]) // بدون discoverWidgets لمنع التكرار
+            ->widgets([]) 
             ->middleware([
                 EncryptCookies::class,
                 AddQueuedCookiesToResponse::class,
