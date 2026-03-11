@@ -37,7 +37,6 @@ class PublisherPanelProvider extends PanelProvider
                 in: app_path('Filament/Publisher/Pages'),
                 for: 'App\\Filament\\Publisher\\Pages'
             )
-            // تسجيل الـ widget صراحةً بدل discoverWidgets
             ->widgets([
             ])
             ->middleware([
